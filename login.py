@@ -6,3 +6,4 @@ FROM_EMAIL  = "your-email" + ORG_EMAIL
 FROM_PWD    = "your-password"
 SMTP_SERVER = "imap.gmail.com"
 SMTP_PORT   = 993
+
