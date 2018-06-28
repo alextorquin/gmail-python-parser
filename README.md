@@ -1,5 +1,5 @@
 # gmail-python-parser
-Parsing a Gmail account with python and extracting specific data that gets logged into a .CSV and uploaded into a MySQL DB
+Parsing a Gmail account with python 
 
 ## Quicknotes
 - You need to ensure that 'IMAP' is enabled on your Gmail account ( Login through your web browser, navigate to settings / Forwarding and POP/IMAP )
