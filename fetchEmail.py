@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # |-------------------------------------------------------------
-# | Email Muncher v1.0
+# | Gmail Python Parser v1.0
 # |-------------------------------------------------------------
 #
 # A python script designed to consume and parse emails from Gmail
