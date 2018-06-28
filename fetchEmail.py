@@ -10,7 +10,7 @@
 import smtplib
 import imaplib
 import email
-import login as cred
+import creds.login as cred
 
 def read_email_from_gmail():
     try:
