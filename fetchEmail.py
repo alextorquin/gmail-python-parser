@@ -11,6 +11,7 @@ import smtplib
 import imaplib
 import email
 import creds.login as cred
+import func.functions as func
 
 def read_email_from_gmail():
     try:
@@ -36,11 +37,7 @@ def read_email_from_gmail():
                     email_from = msg['from']
 
                     if( email_from == cred.PARSE_BY ):
-                        print ('>> Found an email matching the search criteria..\n\n')
-                        print 'From : ' + email_from
-                        print 'Subject : ' + email_subject + '\n'
-                        print msg
-                        print '\n\n'
+                        func.display_email(email_from, email_subject, msg)
                     else:
                         print email_from
 
