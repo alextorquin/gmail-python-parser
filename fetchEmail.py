@@ -15,6 +15,7 @@ import func.functions as func
 
 def read_email_from_gmail():
     try:
+        ''' Create our connection to our Gmail account '''
         mail = imaplib.IMAP4_SSL(cred.SMTP_SERVER, cred.SMTP_PORT)
         mail.login(cred.FROM_EMAIL, cred.FROM_PWD)
         mail.select('inbox')
@@ -36,11 +37,9 @@ def read_email_from_gmail():
                     email_subject = msg['subject']
                     email_from = msg['from']
 
-                    if( email_from == cred.PARSE_BY ):
-                        found_email = func.ParseEmail(email_from, email_subject, msg)
-                        print found_email.print_email()
-                    else:
-                        pass
+                    ''' Pass our captured email to our Parsing class '''
+                    captured_email = func.ParseEmail(email_from, email_subject, msg)
+                    return captured_email.find_specific()
 
     except Exception, e:
         print str(e)
