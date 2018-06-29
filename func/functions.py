@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 
-class Count(object):
-    def __init__(self):
-        self.count = 0
+''' Create our class to log emails '''
+class ParseEmail(object):
+    
+    def __init__(self, email_from, subject, msg):
+        self.email_from = email_from
+        self.subject = subject
+        self.msg = msg 
 
-    def msg_status(self, result):
-        if( self.count != 0 ):
-            self.count += 1
-
-def display_email(email_from, email_subject, msg):
-    print ('>> Found an email matching the search criteria..\n\n')
-    print 'From : ' + email_from
-    print 'Subject : ' + email_subject + '\n'
-    print msg
-    print '\n\n'
+    def print_email(self):
+        print ('>> Returned an email matching search criteria \n')
+        print ('Email from: ' + self.email_from + '\n')
+        print ('Subject: ' + self.subject + '\n')
+        print str(self.msg)
+    
 
 
     

@@ -37,9 +37,10 @@ def read_email_from_gmail():
                     email_from = msg['from']
 
                     if( email_from == cred.PARSE_BY ):
-                        func.display_email(email_from, email_subject, msg)
+                        found_email = func.ParseEmail(email_from, email_subject, msg)
+                        print found_email.print_email()
                     else:
-                        print email_from
+                        pass
 
     except Exception, e:
         print str(e)
